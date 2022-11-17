@@ -1,0 +1,35 @@
+<h1>Editar Usuário</h1>
+<?php
+    $sql = "SELECT * FROM tb_usuarios WHERE id_usuario = ".$_REQUEST["id_usuario"];
+    $results = $conn->query($sql);
+    $row = $results->fetch_object();
+
+?>
+
+<form action="?page=salvar" method="POST">
+    <input type="hidden" name="acao" value="editar">
+    <input type="hidden" name="id_usuario" value="<?php echo $row->id_usuario; ?>">
+    <div class="mb-3">
+        <label>Nome</label>
+        <input type="text" name="descricao" value="<?php echo $row->descricao; ?>" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>E-mail</label>
+        <input type="email" name="email" value="<?php echo $row->email; ?>" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>senha</label>
+        <input type="password" name="senha" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Data de Nascimento</label>
+        <input type="date" name="datausuario" value="<?php echo $row->datausuario; ?>" class="form-control">
+    </div>
+    <div class="mb-3">
+       <button type="submit" class="btn btn-primary"> Enviar</button>
+    </div>
+
+
+
+
+</form>
