@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'PassionT';
+    src: url("fonts/PassionOne-Regular.ttf") format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Sriracha';
+    src: url("fonts/Sriracha-Regular.ttf") format("opentype");
+    font-weight: normal;
+
+}
+
+:root{
+
+    --fontTitulo: 'PassionT';
+    --fontEstrofe: 'Sriracha';
+    --fontPadrao: Arial, Verdana, Helvetica, sans-serif;
+
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body{
+    background-color: rgb(163, 231, 152);
+    
+}
+
+header{
+    background-color: black;
+    text-align: center;
+    min-height: 130px ;
+    min-width: 300px;
+    max-width: 500px;
+    margin: auto;
+    padding-top: 50px;
+    
+}
+
+header > h1{
+    color: white;
+    font-family: var(--fontTitulo);
+    font-size: 2.5em;
+    
+}
+
+header > p {
+    color: white;
+    font-family: var(--fontPadrao);
+    font-weight: normal;
+    font-size: 0.7em;
+}
+
+main{
+    background-color: white;
+    min-width: 300px;
+    max-width: 500px;
+    margin: auto;
+
+    
+}
+
+section.estrofe1{
+    font-family: var(--fontEstrofe);
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 70px 70px 70px 10px;    
+}
+
+section.imgfundo1{
+    background-image: url('imagens/background001.jpg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: var(--fontEstrofe);
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 70px 70px 70px 0px; 
+    color: rgb(209, 191, 191);
+
+
+}
+
+section.imgfundo2{
+    background-image: url('imagens/background002.jpg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: var(--fontEstrofe);
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 70px 70px 70px 0px; 
+    color: rgb(209, 191, 191);
+}
+
+section div{
+    background-color: rgba(0, 0, 0, 0.311);
+    padding-left: 10px;
+    width: 160px;
+}
+
+
+
